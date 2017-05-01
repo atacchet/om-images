@@ -42,11 +42,10 @@ From: bethgelab/jupyter-torch:cuda8.0-cudnn5
     echo "
     
     echo "Adding youtube-dl"
-    apt-get -y install youtube-dl python-numpy python-scipy python-sklearn python-scikits-learn
+    apt-get -y install youtube-dl python-numpy python-scipy python-sklearn python-scikits-learn ipython
 
-LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64:$NV_DRIVER_PATH:\$LD_LIBRARY_PATH
-PATH=$NV_DRIVER_PATH:\$PATH
-PATH=/usr/local/torch/install/bin/:\$PATH
-export PATH LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64:$NV_DRIVER_PATH:\$LD_LIBRARY_PATH
+export PATH=$NV_DRIVER_PATH:\$PATH
+export PATH=/usr/local/torch/install/bin/:\$PATH
     
 " >> /environment
