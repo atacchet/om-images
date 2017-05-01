@@ -39,7 +39,6 @@ From: bethgelab/jupyter-torch:cuda8.0-cudnn5
 
     echo "Adding NVIDIA PATHs to /environment..."
     NV_DRIVER_PATH=/usr/local/NVIDIA-Linux-x86_64
-    echo "
     
     echo "Adding youtube-dl"
     apt-get -y install youtube-dl python-numpy python-scipy python-sklearn python-scikits-learn ipython
