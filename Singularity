@@ -43,6 +43,9 @@ From: bethgelab/jupyter-torch:cuda8.0-cudnn5
     echo "Adding torch modules"
     /usr/local/torch/install/bin/luarocks install torchx
     /usr/local/torch/install/bin/luarocks install https://raw.githubusercontent.com/qassemoquab/stnbhwd/master/stnbhwd-scm-1.rockspec
+    
+    echo "Adding python packages"
+    pip install numpy scipy h5py youtube-dl scikit-learn
 
     echo "
 
