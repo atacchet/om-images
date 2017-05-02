@@ -14,7 +14,8 @@ From: bethgelab/jupyter-torch:cuda8.0-cudnn5
     # add universe repo and install some packages
     sed -i '/xenial.*universe/s/^#//g' /etc/apt/sources.list
     locale-gen en_US.UTF-8
-    apt-get -y update && apt-get -y install wget youtube-dl python-numpy python-scipy python-sklearn python-scikits-learn ipython
+    add-apt-repository -y universe
+    apt-get -y update && apt-get -y install wget libav-tools
     apt-get clean
 
     NV_DRIVER_VERSION=375.20      # <---- EDIT: CHANGE THIS FOR YOUR SYSTEM
@@ -44,9 +45,6 @@ From: bethgelab/jupyter-torch:cuda8.0-cudnn5
     /usr/local/torch/install/bin/luarocks install torchx
     /usr/local/torch/install/bin/luarocks install https://raw.githubusercontent.com/qassemoquab/stnbhwd/master/stnbhwd-scm-1.rockspec
     
-    echo "Adding python packages"
-    pip install numpy scipy h5py youtube-dl scikit-learn
-
     echo "
 
 LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64:$NV_DRIVER_PATH:\$LD_LIBRARY_PATH
