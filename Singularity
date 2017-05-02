@@ -12,10 +12,12 @@ From: bethgelab/jupyter-torch:cuda8.0-cudnn5
     export PATH=/bin:/sbin:/usr/bin:/usr/sbin:$PATH
 
     # add universe repo and install some packages
-    sed -i '/xenial.*universe/s/^#//g' /etc/apt/sources.list
     locale-gen en_US.UTF-8
+    apt-get -y update
+    apt-get -y install software-properties-common
     add-apt-repository -y universe
-    apt-get -y update && apt-get -y install wget libav-tools
+    apt-get -y update
+    apt-get -y install wget libav-tools
     apt-get clean
 
     NV_DRIVER_VERSION=375.20      # <---- EDIT: CHANGE THIS FOR YOUR SYSTEM
