@@ -50,7 +50,7 @@ From: bethgelab/jupyter-torch:cuda8.0-cudnn5
     echo "
 
 LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64:$NV_DRIVER_PATH:\$LD_LIBRARY_PATH
-PATH=$NV_DRIVER_PATH:\$PATH
+PATH=$NV_DRIVER_PATH:/usr/local/cuda/bin:\$PATH
 PATH=/usr/local/torch/install/bin/:\$PATH
 export PATH LD_LIBRARY_PATH
 
