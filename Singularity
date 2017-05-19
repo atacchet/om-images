@@ -17,7 +17,7 @@ From: bethgelab/jupyter-torch:cuda8.0-cudnn5
     apt-get -y install software-properties-common
     add-apt-repository -y universe
     apt-get -y update
-    apt-get -y install wget libav-tools
+    apt-get -y install wget libav-tools ffmpeg
     apt-get clean
 
     NV_DRIVER_VERSION=375.20      # <---- EDIT: CHANGE THIS FOR YOUR SYSTEM
